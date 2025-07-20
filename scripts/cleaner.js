@@ -14,3 +14,26 @@ function removerSpam() {
     }
     // closest('section') se usa para encontrar el ancestro más cercano que sea un elemento <section>. Luego, si se encuentra la sección, se elimina del DOM. 
 }
+
+// Seleccionamos el bloque footer3, asumimos que sólo hay uno o queremos el primero
+const footerSection = document.querySelector('section.footer3');
+
+if (footerSection) {
+  // Empieza desde el siguiente hermano justo después del footer
+  let next = footerSection.nextElementSibling;
+
+  // Recorremos todos los siguientes nodos hermanos
+  while (next) {
+    // Si es una sección, la eliminamos
+    if (next.tagName.toLowerCase() === 'section') {
+      const toRemove = next;
+      next = next.nextElementSibling; // movemos el cursor antes de eliminar
+      toRemove.remove();
+    } else {
+      // Si no es sección, simplemente avanzamos
+      next = next.nextElementSibling;
+    }
+  }
+} else {
+  console.warn('No se encontró ninguna sección con la clase "footer3".');
+}
