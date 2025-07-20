@@ -15,6 +15,14 @@ function removerSpam() {
     // closest('section') se usa para encontrar el ancestro más cercano que sea un elemento <section>. Luego, si se encuentra la sección, se elimina del DOM. 
 }
 
+// Funcionamiento del script:
+// Este script busca un enlace que contenga "mobiri.se" en su href dentro del body y, si lo encuentra, lo elimina del DOM.
+//<section> ... </section>
+//<section class="footer3 other-class"> ... footer ... </section>
+//<section> ... esto se eliminaría ...</section>
+//<section> ... esto también se eliminaría ...</section>
+// 
+
 // Seleccionamos el bloque footer3, asumimos que sólo hay uno o queremos el primero
 const footerSection = document.querySelector('section.footer3');
 
