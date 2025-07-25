@@ -1350,6 +1350,11 @@ a {
 }
 .cid-uRkuXwEkuT {
   display: flex;
+  background-image: url("../../../assets/images/krystal-horizontal.webp");
+}
+.cid-uRkuXwEkuT .mbr-overlay {
+  background-color: #874899;
+  opacity: 0.2;
 }
 @media (min-width: 768px) {
   .cid-uRkuXwEkuT {
